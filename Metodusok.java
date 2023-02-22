@@ -18,11 +18,9 @@ public class Metodusok {
     }
 
     private static void masodikFeladat() {
-        int osszeg;
-        String s;
         int a = 3, b = 6;
-        osszeg = osszeg(a, b);
-            s = String.format("%d + %d = %d\n", a, b, osszeg);
+        int osszeg = osszeg(a, b);
+        String s = String.format("%d + %d = %d\n", a, b, osszeg);
         kiir(s);
     }
 

@@ -15,28 +15,36 @@ public class Metodusok {
 
     private static void elsoFeladat() {
         int osszeg = Elso10SzamOsszege();
-        String s = String.format("Az első 10 szám összege: " + osszeg);
+        String t = String.format("I. Feladat:");
+        String s = String.format("Az első 10 szám összege: " + osszeg + "\n");
+        kiir(t);
         kiir(s);
     }
 
     private static void masodikFeladat() {
         int a = 3, b = 6;
         int osszeg = osszeg(a, b);
-        String s = String.format("%d + %d = %d", a, b, osszeg);
+        String t = String.format("II. Feladat:");
+        String s = String.format("%d + %d = %d\n", a, b, osszeg);
+        kiir(t);
         kiir(s);
     }
 
     private static void harmadikFeladat() {
         int a = 3, b = 6, c = 4, d = 8;
         int osszeg = osszeg(a, osszeg(b, osszeg(c, d)));
-        String s = String.format("%d + %d + %d + %d = %d", a, b, c, d, osszeg);
+        String t = String.format("III. Feladat:");
+        String s = String.format("%d + %d + %d + %d = %d\n", a, b, c, d, osszeg);
+        kiir(t);
         kiir(s);
     }
 
     private static void negyedikFeladat() {
         int a = 3, b = 6, c = 4;
         double gyok = Math.sqrt(osszeg(a, osszeg(b, c)));
-        String s = String.format("gyök(%d + %d + %d) = %.0f", a, b, c, gyok);
+        String t = String.format("IV. Feladat:");
+        String s = String.format("gyök(%d + %d + %d) = %.0f\n", a, b, c, gyok);
+        kiir(t);
         kiir(s);
     }
 

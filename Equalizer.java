@@ -25,31 +25,36 @@ public class Equalizer {
     
     private static void eq(int hossz) {
         String szin = "\u001B[45m";
+        String alapSzin = "\u001B[0m";
         for (int i = 0; i < hossz; i++) {
-            String s = String.format(szin + " ");
-            kiir(s);
+            System.out.print(szin + " " + alapSzin);
         }
         System.out.println("");
     }
     
-    private static void eq(boolean hosszKiir) {
+    private static void eq(boolean latszik) {
         String szin = "\u001B[45m";
-        
-        System.out.println("");
-    }
-    
-    private static void eq(int hossz, boolean hosszKiir) {
-        String szin = "\u001B[45m";
+        String alapSzin = "\u001B[0m";
+        int hossz = rnd.nextInt(3, 8);
         for (int i = 0; i < hossz; i++) {
-            String s = String.format(szin + " " + "(" + hosszKiir + ")");
-            kiir(s);
+            System.out.print(szin + " " + alapSzin);
+        }
+        if (latszik == true) {
+            System.out.print("(" + hossz + ")");
         }
         System.out.println("");
     }
     
-//    MÉG NINCS KÉSZ ÉS HIBÁS
-    
-    private static void kiir(String str){
-        System.out.print(str);
+    private static void eq(int hossz, boolean latszik) {
+        String szin = "\u001B[45m";
+        String alapSzin = "\u001B[0m";
+        for (int i = 0; i < hossz; i++) {
+            System.out.print(szin + " " + alapSzin);
+        }
+        if (latszik == true) {
+            System.out.print("(" + hossz + ")");
+        }
+        System.out.println("");
     }
+    
 }

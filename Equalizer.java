@@ -19,8 +19,7 @@ public class Equalizer {
     }
     
     private static void eq() {
-        int db = rnd.nextInt(3, 8);
-        eq(db);
+        eq(randomHossz());
     }
     
     private static void eq(int hossz) {
@@ -35,12 +34,11 @@ public class Equalizer {
     private static void eq(boolean latszik) {
         String szin = "\u001B[45m";
         String alapSzin = "\u001B[0m";
-        int hossz = rnd.nextInt(3, 8);
-        for (int i = 0; i < hossz; i++) {
+        for (int i = 0; i < randomHossz(); i++) {
             System.out.print(szin + " " + alapSzin);
         }
         if (latszik == true) {
-            System.out.print("(" + hossz + ")");
+            System.out.print("(" + randomHossz() + ")");
         }
         System.out.println("");
     }
@@ -57,4 +55,8 @@ public class Equalizer {
         System.out.println("");
     }
     
+    private static int randomHossz() {
+        int hossz = rnd.nextInt(3, 8);
+        return hossz;
+    }
 }

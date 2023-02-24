@@ -12,33 +12,44 @@ public class Equalizer {
     
     private static void eq_5_sor() {
         eq();
+        eq(8, true);
         eq(12);
-        eq();
-        eq(8);
-        eq();
+        eq(true);
+        eq(false);
     }
     
     private static void eq() {
         int db = rnd.nextInt(3, 8);
-        String szin = "\u001B[45m";
-        for (int i = 0; i < db; i++) {
-            String s = String.format(szin + " ");
-            kiir(s);
-        }
-        System.out.println("");
+        eq(db);
     }
     
     private static void eq(int hossz) {
-        int db = hossz;
         String szin = "\u001B[45m";
-        for (int i = 0; i < db; i++) {
+        for (int i = 0; i < hossz; i++) {
             String s = String.format(szin + " ");
             kiir(s);
         }
         System.out.println("");
     }
     
+    private static void eq(boolean hosszKiir) {
+        String szin = "\u001B[45m";
+        
+        System.out.println("");
+    }
+    
+    private static void eq(int hossz, boolean hosszKiir) {
+        String szin = "\u001B[45m";
+        for (int i = 0; i < hossz; i++) {
+            String s = String.format(szin + " " + "(" + hosszKiir + ")");
+            kiir(s);
+        }
+        System.out.println("");
+    }
+    
+//    MÉG NINCS KÉSZ ÉS HIBÁS
+    
     private static void kiir(String str){
-        System.out.println(str);
+        System.out.print(str);
     }
 }
